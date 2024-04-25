@@ -30,8 +30,9 @@ jobs:
 
     - name: Test
       run: |
+        set -e
         cd build
-        ctest --output-on-failure
+        ./runTests
 
     - name: Check code style
       run: |

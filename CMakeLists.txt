@@ -1,0 +1,13 @@
+# CMakeLists.txt
+cmake_minimum_required(VERSION 3.10)
+project(MyProject)
+
+# Locate GTest
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
+
+# Add main.cpp and test_main.cpp to the project
+add_executable(MyProject src/main.cpp tests/test_main.cpp)
+
+# Link against GTest
+target_link_libraries(MyProject ${GTEST_LIBRARIES} pthread)

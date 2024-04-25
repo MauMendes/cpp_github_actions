@@ -15,3 +15,6 @@ target_link_libraries(MyProject ${GTEST_LIBRARIES} pthread)
 # Link runTests with what we want to test and the GTest and pthread library
 add_executable(runTests tests/test_main.cpp)
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
+
+# Set the test name explicitly
+add_test(NAME MyTests COMMAND runTests)

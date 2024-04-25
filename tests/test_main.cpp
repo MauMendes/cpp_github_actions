@@ -13,9 +13,9 @@ TEST(ExampleTest, Test2) {
 }
 
 // Define a test FAIL to test CI/CD
-TEST(ExampleTest, Test3) {
-    ASSERT_TRUE(false);
-}
+// TEST(ExampleTest, Test3) {
+//     ASSERT_TRUE(false);
+// }
 
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
